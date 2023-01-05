@@ -13,6 +13,7 @@ public class Main {
             {
                 divisionTotal+=i;
             }
+
         }
         if(divisionTotal==n)
             System.out.println(n+" is the Excellent number.");
