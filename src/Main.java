@@ -1,24 +1,27 @@
 
-
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int divided=0;
-
-        for(int i =2; i<100; i++)
+        Scanner inp=new Scanner(System.in);
+        int elements= inp.nextInt();
+        int n;
+        int x=0,y=0;
+        for (int i= 0; i<=elements; i++)
         {
-
-            for(int j =1; j<=i; j++)
+            if(i==0)
             {
-                if(i%j==0)
-                    divided++;
+                y=1;
+                System.out.print(x+" ");
             }
-            if(divided==2)
-                System.out.println(i);
+            else
+            {
 
-            divided=0;
-
+                n=y;
+                y=x+y;
+                x=n;
+                System.out.print(x+" ");
+            }
         }
-
     }
 }
