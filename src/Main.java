@@ -1,20 +1,24 @@
 import java.util.Scanner;
 
-public class Main {
-public static int power(int a,int b){
-    if(b==0)
-        return 1;
+    public class Main{
+        static void prime(int n,int x){
+            int sum=0;
+            for (int i=1;i<=n;i++){
+               if(n%i==0){
+                   sum++;
+               }
 
-    return a* power(a,(b-1));
+            }
+            if(sum==2)
+                System.out.println(n+" is prime number.");
+            else System.out.println(n+" isn't prime number.");
+        }
 
-
-}
-    public static void main(String []args){
-        Scanner inp =new Scanner(System.in);
-        System.out.print("Please enter the base: ");
-        int a= inp.nextInt();
-        System.out.print("Please enter the exponent: ");
-        int b = inp.nextInt();
-        System.out.println(power(a,b));
+        public static void main(String []args){
+            Scanner inp =new Scanner(System.in);
+            System.out.print("Enter a number: ");
+            int n = inp.nextInt();
+            int x=n;
+            prime(n,x);
+        }
     }
-}
