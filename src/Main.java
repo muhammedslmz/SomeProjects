@@ -7,6 +7,7 @@ public static int power(int a,int b){
 
     return a* power(a,(b-1));
 
+
 }
     public static void main(String []args){
         Scanner inp =new Scanner(System.in);
