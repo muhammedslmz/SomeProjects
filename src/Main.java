@@ -1,24 +1,19 @@
 import java.util.Scanner;
 
-    public class Main{
-        static void prime(int n,int x){
-            int sum=0;
-            for (int i=1;i<=n;i++){
-               if(n%i==0){
-                   sum++;
-               }
-
-            }
-            if(sum==2)
-                System.out.println(n+" is prime number.");
-            else System.out.println(n+" isn't prime number.");
+public class Main {
+    public static void design(int n) {
+        System.out.print(n+" ");
+        if(n<=0) {
+            return;
         }
-
-        public static void main(String []args){
-            Scanner inp =new Scanner(System.in);
-            System.out.print("Enter a number: ");
-            int n = inp.nextInt();
-            int x=n;
-            prime(n,x);
-        }
+        design(n-5);
+        System.out.print(n+" ");
     }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("sayı giriniz: ");
+        int n = input.nextInt();
+        design(n);
+    }
+}
